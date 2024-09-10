@@ -1,0 +1,40 @@
+@import "typo/webfonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+main {
+  @apply flex-1;
+}
+
+main p {
+}
+
+main p:last-child {
+  @apply mb-0;
+}
+
+main ul:not(main nav ul) {
+  @apply list-disc m-0 ml-16;
+}
+
+main ul:not(main nav ul) p {
+  @apply mb-0 inline;
+}
+
+main li:not(main nav li) {
+  @apply mb-4
+}
+
+
+/* Helpers */
+.nobr {
+  @apply whitespace-nowrap;
+}
+
+.max-w-inner {
+  @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+}

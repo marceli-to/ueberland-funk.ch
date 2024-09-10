@@ -1,0 +1,26 @@
+<li class="block h-auto w-full md:w-auto border-b border-frost lg:border-none lg:relative group">
+  <a 
+    href="{{ url }}" 
+    class="block py-6 {{ is_current || is_parent ? '' : '' }} lg:after:hidden  lg:after:content-[''] lg:group-hover:after:block lg:after:w-full lg:after:h-6 lg:after:bg-flare lg:after:absolute lg:after:-bottom-11 lg:after:left-0"
+    target="{{ is_external ? '_blank' : '_self' }}"
+    title="{{ title }}">
+    {{ title }}
+  </a>
+  {{ if children }}
+    <ul class="lg:absolute lg:top-full lg:pt-11 lg:-left-10 lg:hidden lg:group-hover:block">
+      <span class="block lg:bg-mist lg:px-10 lg:py-5 lg:min-w-185">
+        {{ children }}
+          <li>
+            <a 
+              href="{{ url }}" 
+              class="block py-6 pl-20 lg:pl-0 {{ is_current || is_parent ? '' : '' }}"
+              target="{{ is_external ? '_blank' : '_self' }}"
+              title="{{ title }}">
+              {{ title }}
+            </a>
+          </li>
+        {{ /children }}
+      </span>
+    </ul>
+  {{ /if }}
+</li>
