@@ -7,6 +7,14 @@ tabs:
         display: Content
         fields:
           -
+            handle: visual
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Visual
+              folder: visuals
+          -
             handle: title
             field:
               type: text
@@ -27,9 +35,13 @@ tabs:
                   display: Hauptelemente
                   icon: addon-boxes-stack
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      fields: {  }
+                    intro:
+                      display: Intro
+                      instructions: 'Intro mit Text und Call to action'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: intro
   seo:
     display: SEO
     sections:

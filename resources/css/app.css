@@ -10,7 +10,12 @@ main {
   @apply flex-1;
 }
 
+main h1 {
+  @apply font-futura-pt-condensed text-lg text-graphite uppercase mb-15 leading-[1.15];
+}
+
 main p {
+  @apply mb-15;
 }
 
 main p:last-child {
@@ -29,6 +34,16 @@ main li:not(main nav li) {
   @apply mb-4
 }
 
+/* Menu */
+.menu-item {
+  @apply block py-6 lg:after:hidden lg:after:content-[''] lg:group-hover:after:block lg:after:w-full lg:after:h-6 lg:after:bg-flare lg:after:absolute lg:after:-bottom-11 lg:after:left-0;
+}
+
+.menu-item.is-active {
+  @apply lg:after:block;
+}
+
+
 
 /* Helpers */
 .nobr {
@@ -38,3 +53,45 @@ main li:not(main nav li) {
 .max-w-inner {
   @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
 }
+
+/* View Transition API */
+/* @view-transition {
+  navigation: auto;
+} */
+
+/* Customize the default animation behavior */
+/* ::view-transition-group(root) {
+  animation-duration: 0.5s;
+} */
+
+/* Create a custom animation */
+/* 
+@keyframes move-out {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes move-in {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+} */
+
+/* Apply the custom animation to the old and new page states */
+
+/* ::view-transition-old(root) {
+animation: 0.2s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.2s ease-in both move-in;
+} */

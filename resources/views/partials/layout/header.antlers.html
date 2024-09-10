@@ -1,11 +1,11 @@
-<header class="bg-white {{ class }}">
-  {{ partial:layout/inner }}
-    <div class="flex justify-between items-center mx-10 md:mx-15 lg:mx-25 pb-15 md:pb-15 py-10 lg:py-20 border-b-frost border-b-[6px]">
+<header class="bg-white md:h-[96px] lg:h-[156px] sticky top-0 z-50 {{ class }}">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex justify-between items-center mx-10 md:mx-15 lg:mx-35 pb-15 md:pb-15 py-10 lg:py-20 border-b-frost border-b-[6px]">
       <a href="/" class="">
         {{ partial:icons/logo class="h-50 md:h-65 lg:h-110 w-auto block" }}
       </a>
       {{ partial:menu/button }}
       {{ partial:menu/wrapper }}
     </div>
-  {{ /partial:layout/inner }}
+  </div>
 </header>

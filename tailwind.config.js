@@ -18,6 +18,10 @@ export default {
         'xs': '480px',
       },
 
+      boxShadow: {
+        'cta': '10px 10px 5px -6px rgba(0,0,0,0.26)',
+      },
+
       maxWidth: {
         '8xl': '96rem',
       },
