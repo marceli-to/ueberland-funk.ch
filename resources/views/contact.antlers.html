@@ -1,3 +1,41 @@
-{{ page_elements }}
-  {{ partial:elements }}
-{{ /page_elements }}
+{{ partial:layout/inner class="md:flex md:gap-x-25 lg:gap-x-50" }}
+  <div class="w-200 max-w-200 mb-25 md:flex-1 ">
+    <a 
+      href="tel:+41449053511" 
+      class="block w-[inherit] shadow-cta md:sticky md:top-[96px] lg:top-[156px]"
+      title="Notrufzentrale Überlandfunk">
+      <img src="/img/cta-notrufzentrale-ueberlandfunk.png" width="400" height="224" alt="" class="w-full h-auto">
+    </a>
+  </div>
+  <div class="px-5 text-charcoal">
+    {{ page_elements }}
+      {{ partial:components/editor }}
+    {{ /page_elements }}
+  
+
+    {{ form:contact_form class="w-full max-w-xl mt-20 lg:mt-30" }}
+
+    {{ if errors }}
+      {{ partial:forms/elements/errors }}
+    {{ /if }}
+
+    {{ if success }}
+      {{ partial:forms/elements/success }}
+        Vielen Dank für Ihre Anfrage.
+      {{ /partial:forms/elements/success }}
+    {{ /if }}
+
+    <input type="text" name="webs1te" class="hidden" />
+    {{ fields }}
+      {{ partial:forms/elements/field }}
+    {{ /fields }}
+    <div class="mt-10">* Pflichtfelder</div>
+    {{ partial:forms/elements/button label="Absenden" }}
+
+
+  {{ /form:contact_form }}
+  </div>
+
+  
+
+{{ /partial:layout/inner }}

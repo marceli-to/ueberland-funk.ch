@@ -1,0 +1,26 @@
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea,
+select {
+  @apply w-full py-7 px-5 bg-mist text-charcoal border-none !ring-0 focus:outline-none focus:!ring-0 focus:text-charcoal placeholder:text-charcoal
+}
+
+.has-error input[type=text],
+.has-error input[type=email],
+.has-error input[type=tel],
+.has-error textarea,
+.has-error select {
+}
+
+.has-error label {
+  @apply text-red-600
+}
+
+textarea {
+  @apply min-h-[120px] lg:min-h-[240px];
+} 
+
+label {
+  @apply font-futura-pt-condensed uppercase block mb-2
+}
