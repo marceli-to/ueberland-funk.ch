@@ -1,1 +1,10 @@
 title: Kontaktformular
+email:
+  -
+    id: m0xztfdt
+    to: info@ueberland-funk.ch
+    from: info@ueberland-funk.ch
+    subject: 'Kontaktformular Webseite'
+    mailer: smtp
+    html: email/html/contact
+    text: email/text/contact

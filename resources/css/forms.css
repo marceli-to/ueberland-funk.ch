@@ -18,7 +18,8 @@ select {
 }
 
 textarea {
-  @apply min-h-[120px] lg:min-h-[240px];
+  @apply p-7 min-h-[120px];
+  field-sizing: content;
 } 
 
 label {

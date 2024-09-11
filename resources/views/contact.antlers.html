@@ -7,35 +7,62 @@
       <img src="/img/cta-notrufzentrale-ueberlandfunk.png" width="400" height="224" alt="" class="w-full h-auto">
     </a>
   </div>
+
   <div class="px-5 text-charcoal">
+
     {{ page_elements }}
       {{ partial:components/editor }}
     {{ /page_elements }}
-  
 
-    {{ form:contact_form class="w-full max-w-xl mt-20 lg:mt-30" }}
+    {{ nocache }}
+    
+      {{ form:contact_form class="w-full max-w-xl mt-20 lg:mt-30" }}
 
-    {{ if errors }}
-      {{ partial:forms/elements/errors }}
-    {{ /if }}
+        {{ if errors }}
+          {{ partial:forms/elements/errors }}
+        {{ /if }}
 
-    {{ if success }}
-      {{ partial:forms/elements/success }}
-        Vielen Dank für Ihre Anfrage.
-      {{ /partial:forms/elements/success }}
-    {{ /if }}
+        {{ if success }}
+          {{ partial:forms/elements/success }}
+            Vielen Dank für Ihre Anfrage.
+          {{ /partial:forms/elements/success }}
+        {{ /if }}
 
-    <input type="text" name="webs1te" class="hidden" />
-    {{ fields }}
-      {{ partial:forms/elements/field }}
-    {{ /fields }}
-    <div class="mt-10">* Pflichtfelder</div>
-    {{ partial:forms/elements/button label="Absenden" }}
+        <input type="text" name="webs1te" class="hidden" />
+        {{ fields }}
+          {{ partial:forms/elements/field }}
+        {{ /fields }}
+        <div class="mt-10">* Pflichtfelder</div>
+        {{ partial:forms/elements/button label="Absenden" }}
 
+      {{ /form:contact_form }}
+      {{ recaptcha }}
+    {{ /nocache }}
 
-  {{ /form:contact_form }}
+    <div class="sm:grid sm:grid-cols-12 sm:gap-x-20 text-base mt-25 lg:mt-50 font-futura-pt-condensed">
+      <div class="sm:col-span-6">
+        {{ contact_information:main_address | nl2br }}<br>
+        {{ contact_information:main_address_phone_fax | nl2br }}<br>
+        <a href="mailto:{{ contact_information:main_address_email }}" title="E-Mail">{{ contact_information:main_address_email }}</a>
+      </div>
+      <div class="sm:col-span-6">
+        {{ contact_information:additional_address | nl2br }}<br>
+        {{ contact_information:additional_address_phone_fax | nl2br }}<br>
+        <a href="mailto:{{ contact_information:additional_address_email }}" title="E-Mail">{{ contact_information:additional_address_email }}</a>
+      </div>
+    </div>
   </div>
 
-  
+{{ /partial:layout/inner }}
 
+{{ partial:layout/inner class="mt-25 lg:mt-50" }}
+  <iframe 
+    class="w-full h-auto aspect-[16/6]"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2702.987898912396!2d8.716432315814357!3d47.35363421341133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa35805b54c5b%3A0xd25f695f06dac7f6!2s%C3%9Cberland+Funk+Stadnik+%26+Brunner+AG!5e0!3m2!1sde!2sch!4v1467194569232" 
+    width="100%" 
+    height="300" 
+    frameborder="0" 
+    style="border:0" 
+    allowfullscreen="">
+  </iframe>
 {{ /partial:layout/inner }}
