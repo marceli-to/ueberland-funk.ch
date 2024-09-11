@@ -40,7 +40,7 @@
     {{ /nocache }}
 
     <div class="sm:grid sm:grid-cols-12 sm:gap-x-20 text-base mt-25 lg:mt-50 font-futura-pt-condensed">
-      <div class="sm:col-span-6">
+      <div class="mb-15 sm:mb-0 sm:col-span-6">
         {{ contact_information:main_address | nl2br }}<br>
         {{ contact_information:main_address_phone_fax | nl2br }}<br>
         <a href="mailto:{{ contact_information:main_address_email }}" title="E-Mail">{{ contact_information:main_address_email }}</a>

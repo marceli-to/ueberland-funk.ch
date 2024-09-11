@@ -4,8 +4,7 @@ fields:
     handle: page_class
     field:
       options:
-        page-privacy: Datenschutz
-        page-imprint: Impressum
+        page-privacy: Impressum/Datenschutz
       type: select
       display: 'Seiten CSS-Klasse'
   -

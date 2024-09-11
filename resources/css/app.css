@@ -47,6 +47,10 @@ main strong {
   @apply font-futura-pt-condensed font-normal
 }
 
+footer a {
+  @apply hover:text-flare transition-colors duration-300;
+}
+
 /* Menu */
 .menu-item {
   @apply block py-6 lg:after:hidden lg:after:content-[''] lg:group-hover:after:block lg:after:w-full lg:after:h-6 lg:after:bg-flare lg:after:absolute lg:after:-bottom-10 lg:after:left-0;
@@ -63,4 +67,18 @@ main strong {
 
 .max-w-inner {
   @apply max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+}
+
+
+/* Privacy */
+.page-privacy h2 {
+  @apply uppercase mb-10
+}
+
+.page-privacy h3 {
+  @apply uppercase font-futura-pt-condensed text-charcoal mb-5;
+}
+
+.page-privacy h2:not(:first-of-type) {
+  @apply mt-20;
 }
