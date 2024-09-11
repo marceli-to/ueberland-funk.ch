@@ -1,0 +1,14 @@
+{{ partial:layout/inner class="sm:grid sm:grid-cols-12 sm:gap-15 md:gap-20 mt-30 sm:mt-40" }}
+  {{ teaser }}
+    <a 
+      href="{{ url }}" 
+      class="block sm:col-span-6 md:col-span-4 hover:no-underline group" 
+      title="{{ title }}">
+      <h2 class="mb-5 uppercase">{{ title }}</h2>
+      {{ partial:media/image 
+        :image="image" 
+        class="w-full h-auto object-cover group-hover:opacity-70 transition-opacity duration-300"
+        preset="focal-16-10" }}
+    </a>
+  {{ /teaser }}
+{{ /partial:layout/inner }}

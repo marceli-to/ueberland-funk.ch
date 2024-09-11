@@ -1,0 +1,24 @@
+title: Teaser
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Titel
+      validate:
+        - required
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Bild
+  -
+    handle: url
+    field:
+      collections:
+        - pages
+      container: assets
+      type: link
+      display: Link

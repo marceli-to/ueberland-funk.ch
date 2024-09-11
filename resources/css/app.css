@@ -11,7 +11,11 @@ main {
 }
 
 main h1 {
-  @apply font-futura-pt-condensed text-lg text-graphite uppercase mb-15 leading-[1.15];
+  @apply font-futura-pt-condensed text-charcoal text-lg uppercase mb-15 leading-[1.15];
+}
+
+main h2 {
+  @apply font-futura-pt-condensed text-charcoal mb-20 tracking-wide leading-[1.15];
 }
 
 main p {
@@ -22,8 +26,12 @@ main p:last-child {
   @apply mb-0;
 }
 
+main a {
+  @apply text-azure hover:underline underline-offset-4 decoration-1
+}
+
 main ul:not(main nav ul) {
-  @apply list-disc m-0 ml-16;
+  @apply list-disc m-0 ml-20 mb-15;
 }
 
 main ul:not(main nav ul) p {
@@ -34,9 +42,13 @@ main li:not(main nav li) {
   @apply mb-4
 }
 
+main strong {
+  @apply font-futura-pt-condensed font-normal
+}
+
 /* Menu */
 .menu-item {
-  @apply block py-6 lg:after:hidden lg:after:content-[''] lg:group-hover:after:block lg:after:w-full lg:after:h-6 lg:after:bg-flare lg:after:absolute lg:after:-bottom-11 lg:after:left-0;
+  @apply block py-6 lg:after:hidden lg:after:content-[''] lg:group-hover:after:block lg:after:w-full lg:after:h-6 lg:after:bg-flare lg:after:absolute lg:after:-bottom-10 lg:after:left-0;
 }
 
 .menu-item.is-active {

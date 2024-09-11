@@ -1,0 +1,18 @@
+{{ partial:layout/inner class="sm:grid sm:grid-cols-12 sm:gap-15 md:gap-x-20 md:gap-y-30 mt-30 sm:mt-40" }}
+  {{ team_member }}
+    <figure class="sm:col-span-6 md:col-span-3">
+      {{ partial:media/image 
+        :image="image" 
+        class="w-full h-auto object-cover"
+        preset="focal-4-3" }}
+        <h2 class="mb-0 mt-10 uppercase">
+          {{ name }}
+        </h2>
+        {{ if role }}
+        <div class="font-futura-pt-condensed">
+          {{ role }}
+        </div>
+        {{ /if }}
+    </figure>
+  {{ /team_member }}
+{{ /partial:layout/inner }}

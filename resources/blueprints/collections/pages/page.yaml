@@ -42,6 +42,50 @@ tabs:
                       fields:
                         -
                           import: intro
+                    teaser:
+                      display: Teaser
+                      instructions: 'Teaser hinzufügen'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          handle: teaser
+                          field:
+                            type: replicator
+                            display: Teaser
+                            sets:
+                              teaser:
+                                display: Teaser
+                                instructions: 'Teaser hinzufügen'
+                                icon: text-formatting-image-top
+                                sets:
+                                  teaser:
+                                    display: Teaser
+                                    instructions: 'Teaser hinzufügen'
+                                    icon: text-formatting-image-top
+                                    fields:
+                                      -
+                                        import: teaser
+                    team_members:
+                      display: Mitarbeiter
+                      instructions: 'Mitarbeiter hinzufügen'
+                      icon: user-avatar
+                      fields:
+                        -
+                          handle: team_member
+                          field:
+                            type: replicator
+                            display: Mitarbeiter
+                            sets:
+                              neue_set-gruppe:
+                                display: 'Neue Set-Gruppe'
+                                sets:
+                                  team_member:
+                                    display: Mitarbeiter
+                                    instructions: 'Mitarbeiter hinzufügen'
+                                    icon: user-avatar
+                                    fields:
+                                      -
+                                        import: team_member
   seo:
     display: SEO
     sections:
