@@ -43,12 +43,8 @@
       <div class="mb-15 sm:mb-0 sm:col-span-6">
         {{ contact_information:main_address | nl2br }}<br>
         {{ contact_information:main_address_phone_fax | nl2br }}<br>
-        <a href="mailto:{{ contact_information:main_address_email }}" title="E-Mail">{{ contact_information:main_address_email }}</a>
-      </div>
-      <div class="sm:col-span-6">
-        {{ contact_information:additional_address | nl2br }}<br>
-        {{ contact_information:additional_address_phone_fax | nl2br }}<br>
-        <a href="mailto:{{ contact_information:additional_address_email }}" title="E-Mail">{{ contact_information:additional_address_email }}</a>
+        <a href="mailto:{{ contact_information:main_address_email }}" title="E-Mail">{{ contact_information:main_address_email }}</a><br>
+        <a href="mailto:{{ contact_information:main_address_additional_email }}" title="E-Mail">{{ contact_information:main_address_additional_email }}</a>
       </div>
     </div>
   </div>
